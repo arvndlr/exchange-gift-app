@@ -1,166 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Delos Reyes Family Exchange Gift</title>
     <style>
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            background-color: #062b16; 
-            color: white; 
-            text-align: center; 
-            padding: 20px; 
-            background-image: radial-gradient(circle, #0a4d28 10%, #062b16 90%);
-        }
-        .header-section { margin-bottom: 30px; }
-        .family-name { font-size: 2.5em; color: #f1c40f; margin: 0; text-shadow: 2px 2px 4px #000; }
-        .event-title { font-size: 1.5em; color: #e74c3c; margin: 0; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; }
-        
-        .container { 
-            max-width: 900px; 
-            margin: auto; 
-            background: rgba(255, 255, 255, 0.1); 
-            padding: 25px; 
-            border-radius: 20px; 
-            backdrop-filter: blur(10px);
-            border: 2px solid #f1c40f;
-        }
-        
-        .grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); 
-            gap: 15px; 
-            margin-top: 20px; 
-        }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #062b16;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        background-image: radial-gradient(circle, #0a4d28 10%, #062b16 90%);
+      }
+      .header-section {
+        margin-bottom: 30px;
+      }
+      .family-name {
+        font-size: 2.5em;
+        color: #f1c40f;
+        margin: 0;
+        text-shadow: 2px 2px 4px #000;
+      }
+      .event-title {
+        font-size: 1.5em;
+        color: #e74c3c;
+        margin: 0;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
 
-        .name-card { 
-            background: #fff; 
-            color: #2c3e50; 
-            padding: 20px 10px; 
-            border-radius: 12px; 
-            cursor: pointer; 
-            font-weight: bold; 
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            border-bottom: 4px solid #bdc3c7;
-            font-size: 1.1em;
-        }
+      .container {
+        max-width: 900px;
+        margin: auto;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 25px;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        border: 2px solid #f1c40f;
+      }
 
-        .name-card:hover { 
-            transform: translateY(-5px); 
-            background: #f1c40f; 
-            color: #fff;
-            border-bottom: 4px solid #d4ac0d;
-        }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 15px;
+        margin-top: 20px;
+      }
 
-        .name-card.done { 
-            background: #27ae60; 
-            color: white; 
-            cursor: default; 
-            border-bottom: 4px solid #1e8449;
-            opacity: 0.8;
-        }
+      .name-card {
+        background: #fff;
+        color: #2c3e50;
+        padding: 20px 10px;
+        border-radius: 12px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        border-bottom: 4px solid #bdc3c7;
+        font-size: 1.1em;
+      }
 
-        /* Modal styling */
-        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); justify-content: center; align-items: center; z-index: 100; }
-        .modal-content { background: white; color: #333; padding: 40px; border-radius: 25px; text-align: center; width: 85%; max-width: 450px; border: 8px solid #e74c3c; }
-        .result-label { font-size: 1.2em; color: #7f8c8d; }
-        .result-name { font-size: 2.8em; color: #c0392b; margin: 15px 0; font-weight: 900; }
-        .close-btn { background: #e74c3c; color: white; border: none; padding: 12px 30px; border-radius: 50px; cursor: pointer; font-size: 1.1em; font-weight: bold; }
+      .name-card:hover {
+        transform: translateY(-5px);
+        background: #f1c40f;
+        color: #fff;
+        border-bottom: 4px solid #d4ac0d;
+      }
 
-        .start-btn { padding: 20px 40px; font-size: 1.5em; cursor: pointer; border-radius: 50px; background: #f1c40f; border: none; color: #062b16; font-weight: 900; box-shadow: 0 5px 20px rgba(0,0,0,0.4); }
-        .tree-icon { cursor: pointer; font-size: 1.5em; }
+      .name-card.done {
+        background: #27ae60;
+        color: white;
+        cursor: default;
+        border-bottom: 4px solid #1e8449;
+        opacity: 0.8;
+      }
+
+      /* Modal styling */
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+      }
+      .modal-content {
+        background: white;
+        color: #333;
+        padding: 40px;
+        border-radius: 25px;
+        text-align: center;
+        width: 85%;
+        max-width: 450px;
+        border: 8px solid #e74c3c;
+      }
+      .result-label {
+        font-size: 1.2em;
+        color: #7f8c8d;
+      }
+      .result-name {
+        font-size: 2.8em;
+        color: #c0392b;
+        margin: 15px 0;
+        font-weight: 900;
+      }
+      .close-btn {
+        background: #e74c3c;
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 1.1em;
+        font-weight: bold;
+      }
+
+      .start-btn {
+        padding: 20px 40px;
+        font-size: 1.5em;
+        cursor: pointer;
+        border-radius: 50px;
+        background: #f1c40f;
+        border: none;
+        color: #062b16;
+        font-weight: 900;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+      }
+      .tree-icon {
+        cursor: pointer;
+        font-size: 1.5em;
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="header-section">
-        <span class="tree-icon" onclick="secretReset()">🎄</span>
-        <h1 class="family-name">Delos Reyes Family</h1>
-        <p class="event-title">Christmas Exchange Gift 2025</p>
+      <span class="tree-icon" onclick="secretReset()">🎄</span>
+      <h1 class="family-name">Delos Reyes Family</h1>
+      <p class="event-title">Christmas Exchange Gift 2025</p>
     </div>
 
     <div class="container">
-        <div id="setupView">
-            <p>Welcome, Delos Reyes Family! Click the button below to shuffle the names and start our Secret Santa drawing.</p>
-            <button class="start-btn" onclick="startDrawing()">SHUFFLE & START 🎁</button>
-        </div>
+      <div id="setupView">
+        <p>
+          Welcome, Delos Reyes Family! Click the button below to shuffle the
+          names and start our Secret Santa drawing.
+        </p>
+        <button class="start-btn" onclick="startDrawing()">
+          SHUFFLE & START 🎁
+        </button>
+      </div>
 
-        <div id="drawView" class="grid" style="display: none;">
-            </div>
+      <div id="drawView" class="grid" style="display: none"></div>
     </div>
 
     <div id="modal" class="modal">
-        <div class="modal-content">
-            <p id="giverDisplay" style="font-weight: bold; color: #27ae60;"></p>
-            <p class="result-label">You have drawn...</p>
-            <div id="resultName" class="result-name"></div>
-            <p style="margin-bottom: 20px;"><i>Show no one! Close this before leaving.</i></p>
-            <button class="close-btn" onclick="closeModal()">DONE! HIDE IT 🤫</button>
-        </div>
+      <div class="modal-content">
+        <p id="giverDisplay" style="font-weight: bold; color: #27ae60"></p>
+        <p class="result-label">You have drawn...</p>
+        <div id="resultName" class="result-name"></div>
+        <p style="margin-bottom: 20px">
+          <i>Show no one! Close this before leaving.</i>
+        </p>
+        <button class="close-btn" onclick="closeModal()">
+          DONE! HIDE IT 🤫
+        </button>
+      </div>
     </div>
 
     <script>
-        const familyNames = [
-            "Abegail", "Agnes", "Arvin", "Angelo", "Aleya", "Aziel", "Mark", "Lex", 
-            "Moymoy", "Lea", "Lei", "Jubilee", "AJ", "Aubrey", "Sigrid", "Fele", 
-            "Rolly", "Linda", "Tenny", "Ramon", "Leo", "Mayette", "Radni", "Perla", 
-            "Jay", "Nanay Ipay", "Kutkot", "Penpen", "Zeus", "Zia", "Dandan", "Tricia"
-        ];
+      const familyNames = [
+        "Abegail",
+        "Agnes",
+        "Arvin",
+        "Angelo",
+        "Aleya",
+        "Aziel",
+        "Mark",
+        "Lex",
+        "Moymoy",
+        "Lea",
+        "Lei",
+        "Jubilee",
+        "AJ",
+        "Aubrey",
+        "Sigrid",
+        "Fele",
+        "Rolly",
+        "Linda",
+        "Tenny",
+        "Ramon",
+        "Leo",
+        "Mayette",
+        "Radni",
+        "Perla",
+        "Jay",
+        "Nanay Ipay",
+        "Kutkot",
+        "Penpen",
+        "Zeus",
+        "Zia",
+        "Dandan",
+        "Tricia",
+      ];
 
-        let pairs = {};
+      let pairs = {};
 
-        function startDrawing() {
-            // Shuffle
-            let shuffled = [...familyNames].sort(() => Math.random() - 0.5);
-            
-            // Match (Circular)
-            for (let i = 0; i < shuffled.length; i++) {
-                let giver = shuffled[i];
-                let receiver = (i === shuffled.length - 1) ? shuffled[0] : shuffled[i+1];
-                pairs[giver] = receiver;
-            }
+      function startDrawing() {
+        // Shuffle
+        let shuffled = [...familyNames].sort(() => Math.random() - 0.5);
 
-            document.getElementById('setupView').style.display = 'none';
-            const grid = document.getElementById('drawView');
-            grid.style.display = 'grid';
-
-            // Alphabetical list for the family to find names easily
-            [...familyNames].sort().forEach(name => {
-                const card = document.createElement('div');
-                card.className = 'name-card';
-                card.id = 'card-' + name.replace(/\s/g, '');
-                card.innerHTML = "🎁<br>" + name;
-                card.onclick = () => revealPartner(name);
-                grid.appendChild(card);
-            });
+        // Match (Circular)
+        for (let i = 0; i < shuffled.length; i++) {
+          let giver = shuffled[i];
+          let receiver =
+            i === shuffled.length - 1 ? shuffled[0] : shuffled[i + 1];
+          pairs[giver] = receiver;
         }
 
-        function revealPartner(name) {
-            const card = document.getElementById('card-' + name.replace(/\s/g, ''));
-            if (card.classList.contains('done')) {
-                alert("This name has already been picked!");
-                return;
-            }
+        document.getElementById("setupView").style.display = "none";
+        const grid = document.getElementById("drawView");
+        grid.style.display = "grid";
 
-            document.getElementById('giverDisplay').innerText = "Hello, " + name + "!";
-            document.getElementById('resultName').innerText = pairs[name];
-            document.getElementById('modal').style.display = 'flex';
-            
-            card.classList.add('done');
-            card.innerHTML = "✅<br>" + name;
+        // Alphabetical list for the family to find names easily
+        [...familyNames].sort().forEach((name) => {
+          const card = document.createElement("div");
+          card.className = "name-card";
+          card.id = "card-" + name.replace(/\s/g, "");
+          card.innerHTML = "🎁<br>" + name;
+          card.onclick = () => revealPartner(name);
+          grid.appendChild(card);
+        });
+      }
+
+      function revealPartner(name) {
+        const card = document.getElementById("card-" + name.replace(/\s/g, ""));
+        if (card.classList.contains("done")) {
+          alert("This name has already been picked!");
+          return;
         }
 
-        function closeModal() {
-            document.getElementById('modal').style.display = 'none';
-        }
+        document.getElementById("giverDisplay").innerText =
+          "Hello, " + name + "!";
+        document.getElementById("resultName").innerText = pairs[name];
+        document.getElementById("modal").style.display = "flex";
 
-        function secretReset() {
-            if(confirm("Admin: Do you want to reset the whole draw? All current progress will be lost!")) {
-                location.reload();
-            }
+        card.classList.add("done");
+        card.innerHTML = "✅<br>" + name;
+      }
+
+      function closeModal() {
+        document.getElementById("modal").style.display = "none";
+      }
+
+      function secretReset() {
+        if (
+          confirm(
+            "Admin: Do you want to reset the whole draw? All current progress will be lost!"
+          )
+        ) {
+          location.reload();
         }
+      }
     </script>
-</body>
+  </body>
 </html>
